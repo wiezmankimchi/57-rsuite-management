@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Button, Container, Content, Sidebar, Sidenav, Icon, Nav, Dropdown, DOMHelper} from 'rsuite'
 
 import NavToggle from './NavToggle';
+import HeaderAvatar from '../HeaderAvatar'
 
 import style from './layout.module.css'
 
@@ -69,6 +70,7 @@ function Layout() {
         }
     }
 
+
     const handleToggle = () => {
         setExpand(!expand)
     }
@@ -97,7 +99,7 @@ function Layout() {
 
 
     return (
-        <Container>
+        
         <Container className={style.frame}>
             <Sidebar style={{ display: 'flex', flexDirection: 'column' }} width={ expand ? 260 : 56} collapsible>
                 <Sidenav.Header>
@@ -124,9 +126,11 @@ function Layout() {
           <NavToggle expand={expand} onChange={e=>handleToggle(e)} />
             </Sidebar>
         
-        </Container>
-        <Container>
-           <Content><span>{height}</span></Content>
+        
+        <Container className={expand ? 'page-container' : 'page-container container-full'}>
+          <HeaderAvatar />
+          <div>Main Content</div>
+          {/* <Content>{children}</Content> */}
         </Container>
         </Container>
     )

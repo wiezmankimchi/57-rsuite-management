@@ -1,33 +1,19 @@
-.App {
-  min-height: 100vh;
-  font-family: sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-  background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+body {
+    background: #f7f7fa;
 }
 
-.search-form {
-  min-height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.rs-sidebar {
+    position: fixed;
+    height: 100vh;
+    z-index: 3;
 }
 
-.search-bar {
-  width: 50%;
-  border: none;
-  padding: 10px;
+.page-container {
+    padding-left: 260px;
+    transition: padding 0.5s;
 }
-
-.search-button {
-  background: lightcoral;
-  border: none;
-  padding: 10px 20px;
-  margin-left: 10px;
-  color: white;
-}
-
-.recepies {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.container-full {
+    padding-left: 60px;
 }
